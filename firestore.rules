@@ -1,0 +1,8 @@
+rules_version = '2';
+// The app currently stores data in the browser (localStorage) and does not use Firestore.
+// The original 30-day test-mode rules expired, so access is explicitly denied here.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} { allow read, write: if false; }
+  }
+}

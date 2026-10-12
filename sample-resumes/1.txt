@@ -1,0 +1,15 @@
+Name: Priya Sharma
+Location: Wardha, Maharashtra
+Education: B.Sc. General Science, Local City College (Graduated 2023)
+
+Skills: 
+- Advanced JavaScript
+- React.js 
+- Tailwind CSS
+- Git & GitHub
+
+Experience:
+Frontend Developer Intern at local startup (1.5 years)
+- Built the main user dashboard using React.js.
+- Worked closely in a team of 4 developers, leading our daily code review meetings.
+- Self-taught programmer through free online YouTube tutorials.
