@@ -4,6 +4,25 @@ const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
+const cors = require('cors');
+const rateLimit = require('express-rate-limit');
+
+// 1. Block unauthorized websites from stealing your backend API
+app.use(cors({
+    origin: 'https://northstar-cleargate.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
+
+// 2. Protect your Free Tier Gemini Quota
+const aiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minute window
+    max: 5, // Limit each IP to 5 evaluations per 15 minutes
+    message: { error: "To ensure fair usage, evaluations are limited to 5 per 15 minutes. Please try again shortly." }
+});
+
+// 3. Apply the limiter ONLY to the AI evaluation route
+app.use('/api/evaluate', aiLimiter);
 const PORT = process.env.PORT || 8080;
 const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 const MAX_PROMPT = 30000;
