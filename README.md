@@ -17,5 +17,6 @@ backend/    Express API (server.js) + Firebase project files + sample resumes
 
 ## Notes
 - `POST /api/evaluate` takes `{ "prompt": "..." }` and returns `{ "aiResponse": "..." }`.
-- Blueprints, profiles and applications are stored in the browser's localStorage (as in the original build); Firebase Auth handles login.
+- Data is stored in Firestore (`companies`, `applicants`, `blueprints`, `screenings`) and synced live; Firebase Auth handles login.
+- Setup: enable Firestore + Google/Email auth in the Firebase console, add your site domain to Auth > Authorized domains, then run `firebase deploy --only firestore:rules` from `backend/`.
 - `sample-resumes/` holds three .txt resumes for testing the upload flow.
