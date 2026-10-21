@@ -1,0 +1,15 @@
+Name: Rohan Kapoor
+Location: South Mumbai
+Education: B.Tech from Elite Global Ivy League University (Graduated 2024)
+
+Skills:
+- Advanced Microsoft Excel
+- Python
+- PowerPoint Presentations
+- Public Speaking
+
+Experience:
+Business Analyst Trainee at MegaCorp Bank
+- Handled client presentations completely independently.
+- Managed spreadsheets and data entry using Python scripts.
+- Won the university debate championship.

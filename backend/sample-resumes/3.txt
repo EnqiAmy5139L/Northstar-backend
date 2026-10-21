@@ -1,0 +1,14 @@
+Name: Amit Patil
+Location: Nagpur, Maharashtra
+Education: 6-Month Online Coding Bootcamp
+
+Skills:
+- Basic JavaScript
+- HTML & CSS
+- Excellent Communication & Team Player
+
+Experience:
+Junior Web Intern (6 months)
+- Built a weather app using Vanilla JavaScript.
+- Coordinated heavily with the backend team to connect APIs.
+- I am currently taking a beginner course on React.js on weekends to improve my frontend skills.
