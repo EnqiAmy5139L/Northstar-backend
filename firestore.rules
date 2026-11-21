@@ -9,7 +9,9 @@ service cloud.firestore {
       allow update, delete: if request.auth != null && request.auth.uid == resource.data.ownerUid;
     }
     match /screenings/{id} {
-      allow read: if request.auth != null && request.auth.uid in [resource.data.companyUid, resource.data.applicantUid];
+      // written as two plain equality checks so Firestore accepts the filtered list queries
+      allow read: if request.auth != null
+        && (resource.data.applicantUid == request.auth.uid || resource.data.companyUid == request.auth.uid);
       allow create: if request.auth != null && request.auth.uid == request.resource.data.applicantUid;
       allow update: if request.auth != null && request.auth.uid == resource.data.companyUid;
     }
